@@ -92,6 +92,10 @@ In our second Kaggle submission we used a Sequential Nueral Network model and ac
 
 
 ## **🖼️ Impact Narrative**
+**WiDS challenge:**
+
+1. What brain activity patterns are associated with ADHD; are they different between males and females, and, if so, how?
+2. How could your work help contribute to ADHD research and/or clinical care?
 
 ## **Next Steps and Future Improvements**
 
