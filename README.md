@@ -54,8 +54,35 @@ Include at least 2-3 visualizations from your Exploratory Data Analysis:
 
 
 # Implementation
-Data cleaning and Feature Engineering.
-We used a Random Forest model at first. Then to improve the resutls we built a GNN model.
+1. Data Cleaning and Feature Engineering
+
+Initial preprocessing involved cleaning the dataset and selecting relevant features. 
+
+Feature engineering techniques were applied to enhance data representation.
+
+2. Baseline Model: Random Forest
+
+A Random Forest model was trained as the initial baseline.
+
+The model was evaluated using accuracy and F1-score.
+
+While it provided decent results, improvements were sought through deep learning techniques.
+
+3. Transition to Graph Neural Networks (GNN)
+
+To improve classification performance, a GNN model was implemented using PyTorch Geometric.
+
+The connectivity matrix was converted into a graph representation where nodes represented brain regions and edges reflected connectivity strengths.
+
+Graph objects (data_list) were created for training the model.
+
+4. GNN Model Training and Evaluation
+
+A GNN was trained to predict ADHD outcomes and other classifications.
+
+Performance metrics such as accuracy and F1-score were computed.
+
+The results were compared with the Random Forest classifier to assess improvements.
 
 # Results
 We achieved a score of 
