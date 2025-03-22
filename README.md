@@ -95,7 +95,13 @@ In our second Kaggle submission we used a Sequential Nueral Network model and ac
 **WiDS challenge:**
 
 1. What brain activity patterns are associated with ADHD; are they different between males and females, and, if so, how?
-  - 
+  - we believe that
+    ["APQ_P_APQ_P_INV",
+    "APQ_P_APQ_P_OPD",
+    "SDQ_SDQ_Hyperactivity",
+    "SDQ_SDQ_Externalizing",
+    "SDQ_SDQ_Emotional_Problems",
+    "SDQ_SDQ_Difficulties_Total"] 
 3. How could your work help contribute to ADHD research and/or clinical care?
   - Tools of this nature can help identify individuals who may be at risk of ADHD, which can be difficult to diagnose particularly in females. Importantly, they help shed light on the parts of the brain relevant to ADHD in females and males, which in turn could lead to improvements in personalized medicine and therapies. Identifying ADHD early and designing therapies targeting specific brain mechanisms in a personalized way can greatly improve the mental health of affected individuals.
 
