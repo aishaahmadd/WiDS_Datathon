@@ -98,6 +98,9 @@ In our second Kaggle submission we used a Sequential Nueral Network model and ac
 2. How could your work help contribute to ADHD research and/or clinical care?
 
 ## **Next Steps and Future Improvements**
+* What are some of the limitations of your model?
+* What would you do differently with more time/resources?
+* What additional datasets or techniques would you explore?
 
 ## **📄 References & Additional Resources**
 
