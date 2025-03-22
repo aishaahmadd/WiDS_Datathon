@@ -28,7 +28,7 @@ We were given the following datasets:
 
 - TRAIN_QUANTITATIVE_METADATA.xlsx - (socio-demographic information, e.g., subject’s “handedness” or “parent’s education level”, emotions (“Strength and Difficulties Questionnaire”), and parenting information (“Alabama Parenting Questionnaire”).)
 
-- TRAINING_SOLUTIONS.xlsx  - (the targets (ADHD diagnosis and sex)
+- TRAINING_SOLUTIONS.xlsx  - (the targets (ADHD diagnosis and sex))
 
 - TEST_CATEGORICAL.xlsx - (socio-demographic, emotions, and parenting information)
 
@@ -39,6 +39,7 @@ We were given the following datasets:
 Describe your data exploration and preprocessing approaches:
 - We focused on exploring the data and finding missing values.
 - We scaled the values so that they can be in closer rane to each other. This is because we had various different ranges of data for each field.
+- 
 
 
 Include at least 2-3 visualizations from your Exploratory Data Analysis:
