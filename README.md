@@ -87,7 +87,9 @@ Performance metrics such as accuracy and F1-score were computed.
 The results were compared with the Random Forest classifier to assess improvements.
 
 ## **Results**
-We achieved a score of 
+In our first Kaggle submission we used a RandomForest model and achieved a score of:
+In our second Kaggle submission we used a Sequential Nueral Network model and achieved a score of:
+
 
 ## **🖼️ Impact Narrative**
 
