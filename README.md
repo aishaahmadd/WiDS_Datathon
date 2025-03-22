@@ -17,7 +17,7 @@ This relates to the Break Through Tech AI program since we have learned how to d
 
 Tools of this nature can help identify individuals who may be at risk of ADHD, which can be difficult to diagnose particularly in females. Importantly, they help shed light on the parts of the brain relevant to ADHD in females and males, which in turn could lead to improvements in personalized medicine and therapies. Identifying ADHD early and designing therapies targeting specific brain mechanisms in a personalized way can greatly improve the mental health of affected individuals.
 
-## **Data Exploration**
+## **📊 Data Exploration**
 Describe the dataset(s) used (i.e., the data provided in Kaggle + any additional sources):
 We were given the following datasets:
 
