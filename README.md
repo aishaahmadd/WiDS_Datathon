@@ -38,7 +38,7 @@ We were given the following datasets:
 
 Describe your data exploration and preprocessing approaches:
 - We focused on exploring the data and finding missing values.
-- We scaled the values so that they can be in closer rane to each other. This is because we had various different ranges of data for each field.
+- We scaled the values so that they can be in closer range to each other. This is because we had various different ranges of data for each field.
 - 
 
 
