@@ -43,6 +43,7 @@ Describe your data exploration and preprocessing approaches:
 
 
 Include at least 2-3 visualizations from your Exploratory Data Analysis:
+<img width="417" alt="Screenshot 2025-03-22 at 10 56 53 AM" src="https://github.com/user-attachments/assets/c8a5ed78-cfd8-4015-b94e-38a12527b79d" />
 
 
 # Implementation
