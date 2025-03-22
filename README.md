@@ -1,5 +1,5 @@
 # WiDS_Datathon
-### **👥 Team Members** 
+## **👥 Team Members** 
 - Ana Sordo (https://github.com/megaDeathChav)
 - Gianelli Lagos (https://github.com/GianelliL)
 - Fatima Mora Garcia (https://github.com/fmora22)
