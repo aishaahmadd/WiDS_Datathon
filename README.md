@@ -1,5 +1,5 @@
 # WiDS_Datathon
-# Members 
+### **👥 Team Members** 
 - Ana Sordo (https://github.com/megaDeathChav)
 - Gianelli Lagos (https://github.com/GianelliL)
 - Fatima Mora Garcia (https://github.com/fmora22)
@@ -8,7 +8,7 @@
 ## **🎯 Project Highlights**
 ## **👩🏽‍💻 Setup & Execution**
 
-# Purpose
+## **Purpose**
 Using fMRI data, we built a model to predict both an individual’s sex and their ADHD diagnosis.
 
 In this year’s WiDS Datathon, participants were tasked with building a model to predict both an individual’s sex and their ADHD diagnosis using functional brain imaging data of children and adolescents and their socio-demographic, emotions, and parenting information. 
@@ -17,7 +17,7 @@ This relates to the Break Through Tech AI program since we have learned how to d
 
 Tools of this nature can help identify individuals who may be at risk of ADHD, which can be difficult to diagnose particularly in females. Importantly, they help shed light on the parts of the brain relevant to ADHD in females and males, which in turn could lead to improvements in personalized medicine and therapies. Identifying ADHD early and designing therapies targeting specific brain mechanisms in a personalized way can greatly improve the mental health of affected individuals.
 
-# Data Exploration
+## **Data Exploration**
 Describe the dataset(s) used (i.e., the data provided in Kaggle + any additional sources):
 We were given the following datasets:
 
@@ -55,8 +55,7 @@ Include at least 2-3 visualizations from your Exploratory Data Analysis:
 
 <img width="655" alt="Screenshot 2025-03-22 at 10 57 31 AM" src="https://github.com/user-attachments/assets/03c0ab5b-5e3e-445f-b47d-390d471ce21b" />
 
-## **🧠 Model Development**
-# Implementation
+## **🧠 Model Development/Implementation**
 1. Data Cleaning and Feature Engineering
 
 Initial preprocessing involved cleaning the dataset and selecting relevant features. 
@@ -87,12 +86,12 @@ Performance metrics such as accuracy and F1-score were computed.
 
 The results were compared with the Random Forest classifier to assess improvements.
 
-# Results
+## **Results**
 We achieved a score of 
 
 ## **🖼️ Impact Narrative**
 
-# Next Steps and Future Improvements
+## **Next Steps and Future Improvements**
 
 ## **📄 References & Additional Resources**
 
