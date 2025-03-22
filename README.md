@@ -4,6 +4,9 @@
 - Gianelli Lagos (https://github.com/GianelliL)
 - Fatima Mora Garcia (https://github.com/fmora22)
 - Aisha Ahmad (https://github.com/aishaahmadd)
+  
+## **🎯 Project Highlights**
+## **👩🏽‍💻 Setup & Execution**
 
 # Purpose
 Using fMRI data, we built a model to predict both an individual’s sex and their ADHD diagnosis.
@@ -52,7 +55,7 @@ Include at least 2-3 visualizations from your Exploratory Data Analysis:
 
 <img width="655" alt="Screenshot 2025-03-22 at 10 57 31 AM" src="https://github.com/user-attachments/assets/03c0ab5b-5e3e-445f-b47d-390d471ce21b" />
 
-
+## **🧠 Model Development**
 # Implementation
 1. Data Cleaning and Feature Engineering
 
@@ -87,7 +90,11 @@ The results were compared with the Random Forest classifier to assess improvemen
 # Results
 We achieved a score of 
 
+## **🖼️ Impact Narrative**
+
 # Next Steps and Future Improvements
+
+## **📄 References & Additional Resources**
 
 
 
