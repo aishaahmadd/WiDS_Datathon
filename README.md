@@ -1,9 +1,9 @@
 # WiDS_Datathon
 # Members 
-Ana Sordo (https://github.com/megaDeathChav)
-Gianelli Lagos (https://github.com/GianelliL)
-Fatima Mora Garcia (https://github.com/fmora22)
-Aisha Ahmad (https://github.com/aishaahmadd)
+- Ana Sordo (https://github.com/megaDeathChav)
+- Gianelli Lagos (https://github.com/GianelliL)
+- Fatima Mora Garcia (https://github.com/fmora22)
+- Aisha Ahmad (https://github.com/aishaahmadd)
 
 # Purpose
 Using fMRI data, we built a model to predict both an individual’s sex and their ADHD diagnosis.
@@ -18,23 +18,23 @@ Tools of this nature can help identify individuals who may be at risk of ADHD, w
 Describe the dataset(s) used (i.e., the data provided in Kaggle + any additional sources):
 We were given the following datasets:
 
-Data Dicitonary.xlsx -(Helps us understand what the fields and data for each field mean)
+- Data Dicitonary.xlsx -(Helps us understand what the fields and data for each field mean)
 
-Sample Submission.xlsx - (This is an example of what our submission should look like)
+- Sample Submission.xlsx - (This is an example of what our submission should look like)
 
-TRAIN_CATEGORICAL_METADATA.xlsx - (socio-demographic information, e.g., subject’s “handedness” or “parent’s education level”, emotions (“Strength and Difficulties Questionnaire”), and parenting information (“Alabama Parenting Questionnaire”).)
+- TRAIN_CATEGORICAL_METADATA.xlsx - (socio-demographic information, e.g., subject’s “handedness” or “parent’s education level”, emotions (“Strength and Difficulties Questionnaire”), and parenting information (“Alabama Parenting Questionnaire”).)
 
-TRAIN_FUNCTIONAL_CONNECTOME_MATRICES.csv - (functional MRI connectome matrices)
+- TRAIN_FUNCTIONAL_CONNECTOME_MATRICES.csv - (functional MRI connectome matrices)
 
-TRAIN_QUANTITATIVE_METADATA.xlsx - (socio-demographic information, e.g., subject’s “handedness” or “parent’s education level”, emotions (“Strength and Difficulties Questionnaire”), and parenting information (“Alabama Parenting Questionnaire”).)
+- TRAIN_QUANTITATIVE_METADATA.xlsx - (socio-demographic information, e.g., subject’s “handedness” or “parent’s education level”, emotions (“Strength and Difficulties Questionnaire”), and parenting information (“Alabama Parenting Questionnaire”).)
 
-TRAINING_SOLUTIONS.xlsx  - (the targets (ADHD diagnosis and sex)
+- TRAINING_SOLUTIONS.xlsx  - (the targets (ADHD diagnosis and sex)
 
-TEST_CATEGORICAL.xlsx - (socio-demographic, emotions, and parenting information)
+- TEST_CATEGORICAL.xlsx - (socio-demographic, emotions, and parenting information)
 
-TEST_FUNCTIONAL_CONNECTOME_MATRICES.csv - (functional MRI connectome matrices)
+- TEST_FUNCTIONAL_CONNECTOME_MATRICES.csv - (functional MRI connectome matrices)
 
-TEST_QUANTITATIVE_METADATA.xlsx - (socio-demographic, emotions, and parenting information)
+- TEST_QUANTITATIVE_METADATA.xlsx - (socio-demographic, emotions, and parenting information)
 
 Describe your data exploration and preprocessing approaches:
 - We focused on exploring the data and finding missing values.
