@@ -8,6 +8,23 @@
 ## **🎯 Project Highlights**
 ## **👩🏽‍💻 Setup & Execution**
 
+
+### Local Copy
+#### Clone the Repository
+    git clone https://github.com/aishaahmadd/WiDS_Datathon.git
+    cd WiDS_Datathon
+Using Kaggle command:
+
+
+    kaggle competitions download -c widsdatathon2025
+Feel free to use the kaggle Interface here: https://www.kaggle.com/competitions/widsdatathon2025
+
+
+- Click the blue plus sign in the lefthand navigation pane
+- Click “New Notebook” 
+- Upload file version “Sequential Neural Network” from gtihub repo
+- Run all cells
+
 ## **🏗️ Project Overview**
 Using fMRI data, we built a model to predict both an individual’s sex and their ADHD diagnosis.
 
@@ -18,34 +35,10 @@ This relates to the Break Through Tech AI program since we have learned how to d
 Tools of this nature can help identify individuals who may be at risk of ADHD, which can be difficult to diagnose particularly in females. Importantly, they help shed light on the parts of the brain relevant to ADHD in females and males, which in turn could lead to improvements in personalized medicine and therapies. Identifying ADHD early and designing therapies targeting specific brain mechanisms in a personalized way can greatly improve the mental health of affected individuals.
 
 ## **📊 Data Exploration**
-Describe the dataset(s) used (i.e., the data provided in Kaggle + any additional sources):
-We were given the following datasets:
-
-- Data Dicitonary.xlsx -(Helps us understand what the fields and data for each field mean)
-
-- Sample Submission.xlsx - (This is an example of what our submission should look like)
-
-- TRAIN_CATEGORICAL_METADATA.xlsx - (socio-demographic information, e.g., subject’s “handedness” or “parent’s education level”, emotions (“Strength and Difficulties Questionnaire”), and parenting information (“Alabama Parenting Questionnaire”).)
-
-- TRAIN_FUNCTIONAL_CONNECTOME_MATRICES.csv - (functional MRI connectome matrices)
-
-- TRAIN_QUANTITATIVE_METADATA.xlsx - (socio-demographic information, e.g., subject’s “handedness” or “parent’s education level”, emotions (“Strength and Difficulties Questionnaire”), and parenting information (“Alabama Parenting Questionnaire”).)
-
-- TRAINING_SOLUTIONS.xlsx  - (the targets (ADHD diagnosis and sex))
-
-- TEST_CATEGORICAL.xlsx - (socio-demographic, emotions, and parenting information)
-
-- TEST_FUNCTIONAL_CONNECTOME_MATRICES.csv - (functional MRI connectome matrices)
-
-- TEST_QUANTITATIVE_METADATA.xlsx - (socio-demographic, emotions, and parenting information)
-
-Describe your data exploration and preprocessing approaches:
-- We focused on exploring the data and finding missing values.
-- We scaled the values so that they can be in closer range to each other. This is because we had various different ranges of data for each field.
-- 
+Our dataset includes diagnostic, socio-demographic, emotions, and parenting data, and functional MRI data from the Healthy Brain Network (HBN) — the signature scientific initiative of the Child Mind Institute. For data preprocessing, we created frequency plots to understand the data distribution. We also evaluated the feature correlations with Sex_F. The main challenges we faced in this step was when handling the connectome data, since it's a large dataset.
 
 
-Include at least 2-3 visualizations from your Exploratory Data Analysis:
+Visualizations from our Exploratory Data Analysis:
 
 <img width="417" alt="Screenshot 2025-03-22 at 10 56 53 AM" src="https://github.com/user-attachments/assets/c8a5ed78-cfd8-4015-b94e-38a12527b79d" />
 
@@ -56,61 +49,82 @@ Include at least 2-3 visualizations from your Exploratory Data Analysis:
 <img width="655" alt="Screenshot 2025-03-22 at 10 57 31 AM" src="https://github.com/user-attachments/assets/03c0ab5b-5e3e-445f-b47d-390d471ce21b" />
 
 ## **🧠 Model Development/Implementation**
-1. Data Cleaning and Feature Engineering
 
-Initial preprocessing involved cleaning the dataset and selecting relevant features. 
-
-Feature engineering techniques were applied to enhance data representation.
-
-2. Baseline Model: Random Forest
-
-A Random Forest model was trained as the initial baseline.
-
-The model was evaluated using accuracy and F1-score.
-
-While it provided decent results, improvements were sought through deep learning techniques.
-
-3. Transition to Graph Neural Networks (GNN)
-
-To improve classification performance, a GNN model was implemented using PyTorch Geometric.
-
-The connectivity matrix was converted into a graph representation where nodes represented brain regions and edges reflected connectivity strengths.
-
-Graph objects (data_list) were created for training the model.
-
-4. GNN Model Training and Evaluation
-
-A GNN was trained to predict ADHD outcomes and other classifications.
-
-Performance metrics such as accuracy and F1-score were computed.
-
-The results were compared with the Random Forest classifier to assess improvements.
+We decided to use a Multi-Layer Perceptron (MLP) neural network with 2 outputs, one for sex and one for ADHD Outcome. We selected this model due to its compatibility for multi-output binary classification problems, since we are predicting both ADHD outcome and Sex_F. An initial learning rate of 0.001 was set using the Adam optimizer, which performs well without manual adjustments. We used a batch size of 32 to balance computational efficiency and model complexity. Our training approach was to utilize the Adam optimizer for the learning rate, use Binary Cross-Entropy loss to minimize the difference between predicted and actual probabilities for both ADHD and Sex_F outcomes, and use Binary Accuracy as the primary evaluation metric. The predictions were obtained by converting probabilities to binary class predictions using a 0.5 threshold.
 
 ## **📈 Results & Key Findings**
-In our first Kaggle submission we used a RandomForest model and achieved a score of:
-In our second Kaggle submission we used a Sequential Nueral Network model and achieved a score of:
 
+### **Initial Model: Random Forest**
+At the start, we implemented two separate Random Forest (RF) models: one for ADHD prediction and another for Sex classification. This approach allowed us to assess the effectiveness of tree-based methods for both tasks before committing to a more complex model.
+
+#### **ADHD Model Performance**
+- **Accuracy:** 80.59%  
+- **F1-Score:** 86.68%  
+- **Precision & Recall Breakdown:**
+  - **Class 0 (No ADHD):** 69% precision, 60% recall, 64% F1-score
+  - **Class 1 (ADHD):** 85% precision, 89% recall, 87% F1-score
+
+#### **Sex Model Performance**
+- **Accuracy:** 61.84%  
+- **F1-Score:** 29.26%  
+- **Precision & Recall Breakdown:**
+  - **Class 0 (Male):** 65% precision, 85% recall, 74% F1-score
+  - **Class 1 (Female):** 45% precision, 22% recall, 29% F1-score
+
+While the ADHD model performed well, the Sex classification model struggled, likely due to class imbalance and a limited number of distinguishing features.
+
+### **Final Model: Sequential Neural Network (MLP)**
+After evaluating the RF results, we transitioned to a Multilayer Perceptron (MLP) model to improve predictive performance. Unlike RF, which lacks scalability for high-dimensional data, MLP allowed us to capture more complex relationships in the dataset.
+
+- **Accuracy:** 94%  
+- **Precision:** 94%  
+- **Recall:** 88%  
 
 ## **🖼️ Impact Narrative**
 **WiDS challenge:**
 
 1. What brain activity patterns are associated with ADHD; are they different between males and females, and, if so, how?
-  - we believe that
+  - we believe that in the connectome data “0throw_103thcolumn” is highly correlated with ADHD. As well as “0throw_102thcolumn”, “1throw_149thcolumn”, “0throw_156thcolumn” and more. 
+- We think that these columns in the other data:
     ["APQ_P_APQ_P_INV",
     "APQ_P_APQ_P_OPD",
     "SDQ_SDQ_Hyperactivity",
     "SDQ_SDQ_Externalizing",
     "SDQ_SDQ_Emotional_Problems",
-    "SDQ_SDQ_Difficulties_Total"] 
+    "SDQ_SDQ_Difficulties_Total"] is the most correlated to adhd. 
+We were only given female data.
 3. How could your work help contribute to ADHD research and/or clinical care?
   - Tools of this nature can help identify individuals who may be at risk of ADHD, which can be difficult to diagnose particularly in females. Importantly, they help shed light on the parts of the brain relevant to ADHD in females and males, which in turn could lead to improvements in personalized medicine and therapies. Identifying ADHD early and designing therapies targeting specific brain mechanisms in a personalized way can greatly improve the mental health of affected individuals.
 
-## **Next Steps and Future Improvements**
-* What are some of the limitations of your model?
-* What would you do differently with more time/resources?
-* What additional datasets or techniques would you explore?
+## 🚀 Next Steps & Future Improvements
 
-## **📄 References & Additional Resources**
+### Limitations of the Model
+- While our MLP model achieved strong results (94% accuracy, 94% precision, and 88% recall), it lacks interpretability compared to Random Forest (RF), making it difficult to analyze feature importance.
+- Our attempt to improve performance using Leaky ReLU and Batch Normalization led to a drop in validation accuracy from 94% to ~79%, suggesting potential over-normalization or added complexity.
+- Due to time constraints, we did not explore feature selection techniques such as Recursive Feature Elimination (RFE) or SHAP, which could have refined the input features.
+
+### What We Would Do Differently
+- Our initial pipeline transitioned from RF to GNN, but we faced data format issues with the connectome (brain) data, particularly in converting 397-length connectivity vectors into valid adjacency matrices. This resulted in two weeks of debugging without significant progress.
+- A more structured approach—RF to MLP to GCN to GNN—would have allowed us to incrementally assess performance trade-offs rather than getting stuck on GNN early.
+- More extensive hyperparameter tuning (e.g., adjusting learning rates, dropout rates) could have further optimized MLP performance.
+
+### Additional Datasets & Techniques to Explore
+- **Ensemble Learning:** Combining RF, MLP, and XGBoost could improve model robustness.
+- **Graph Neural Networks (GNNs)**: If time allowed, refining graph construction from connectome data and testing models like GraphSAGE or GAT could enhance learning.
+- **Feature Engineering** Applying dimensionality reduction techniques like PCA or Autoencoders could improve performance by mitigating high-dimensional connectome data challenges to our final model.
+
+Despite the challenges, our best MLP model (94% accuracy, 94% precision, 88% recall) provided a strong predictive baseline. However, our accuracy in the competition was approximately 0.59, indicating potential overfitting to the training data or a domain shift in the test set. With additional time, feature selection, ensemble methods, and a structured model progression could further optimize performance.
+
+
+
+## **📄 References & Additional Resources**  
+
+- [Understanding MLPs and Neural Networks](https://www.youtube.com/watch?si=u1q_45MKaRzue70d&v=OkE3776GfWU&feature=youtu.be)  
+- [Graph Neural Networks (GNNs) Explained](https://www.youtube.com/watch?si=Q0FuLhRJAHxqRcPx&v=vtHBOBOcn6E&feature=youtu.be)  
+- [Feature Selection Techniques for Machine Learning](https://youtu.be/jbIsfVxuMWM?si=BRxueH_vuGFBtTcd)  
+- [Ensemble Methods in Machine Learning](https://www.youtube.com/watch?si=4n6Ghe9Eoh5lO1eL&v=jbIsfVxuMWM&feature=youtu.be)  
+
+
 
 
 
