@@ -78,7 +78,12 @@ After evaluating the RF results, we transitioned to a Multilayer Perceptron (MLP
 
 - **Accuracy:** 94%  
 - **Precision:** 94%  
-- **Recall:** 88%  
+- **Recall:** 88%
+
+Despite this improvement, our actual Kaggle leaderboard score was approximately 0.59, suggesting that the model may have overfit the training data or that there were distributional differences between the training and test sets.
+
+By consolidating ADHD and Sex classification into a single MLP model, we streamlined the training pipeline while leveraging the same feature set for both predictions. However, further improvements in feature selection and regularization would be necessary to bridge the gap between validation and leaderboard performance.
+
 
 ## **🖼️ Impact Narrative**
 **WiDS challenge:**
